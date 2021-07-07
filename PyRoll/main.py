@@ -6,7 +6,7 @@ import csv
 csvReader = os.path.join('PyRoll','Resources','election_data.csv')
 output_path = os.path.join('PyRoll','Output','Results.txt')
 
-#create variable to count months and List to hold budget data
+#create variable to count months and List to hold election data
 count = 0
 votes = [] #sums to hold the values from list
 
@@ -22,7 +22,7 @@ with open(csvReader) as f:
   csvfile = csv.DictReader(f)
   header = next(data)
 
-# loop through the list to create lists and count the number of months
+# loop through the list to create lists for votes
   for row in data:
         count += 1
         votes.append(str(row[2]))
